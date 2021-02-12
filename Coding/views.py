@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import os
 
 def index(request):
-    return HttpResponse("This is my Official Website")
-def add(request):
-    return HttpResponse("This is my add")
+    return render(request,"index.html")
+   
+
 
