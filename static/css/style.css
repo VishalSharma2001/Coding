@@ -1,4 +1,15 @@
-body{
+body {
     display: grid;
-    
-}
+    grid-template-areas:
+      'nav';
+  }
+
+  #nav {
+    grid-area: nav;
+  }
+  #nav img{
+    border-radius: 11px;
+    background-color: black;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
