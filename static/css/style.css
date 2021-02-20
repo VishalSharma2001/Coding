@@ -1,7 +1,9 @@
 body {
     display: grid;
+    font-family: 'Roboto', sans-serif;
     grid-template-areas:
-      'nav';
+      'nav nav'
+      'hdr hdr';
   }
 
   #nav {
@@ -12,4 +14,35 @@ body {
     background-color: black;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+  }
+  #hdr{
+    grid-area: hdr;
+  }
+  .header{
+    background-color:#DCE1E3;
+    display: block;
+    /* border: 2px solid black; */
+    width: auto;
+    /* margin: auto; */
+    /* text-align: center; */
+    height: 280px;
+    position:relative;
+  }
+  #brand{
+    /* border: 2px solid black; */
+    display: block;
+    /* margin:auto; */
+    width:auto; 
+    text-align: center;
+    font-size: 84px;
+    /* color: initial; */
+    color: #4f5f76;
+  }
+  #typej{
+    /* border: 2px solid black; */
+    display: block;
+    width: auto;
+    margin-top: 20px;
+    text-align: center;
+
   }
