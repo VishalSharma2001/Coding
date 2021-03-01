@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +13,155 @@
     crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" async defer></script>
+  <style>
+    body {
+      display: grid;
+      font-family: 'Roboto', sans-serif;
+      grid-template-areas:
+        'nav nav nav nav'
+        'hdr hdr hdr hdr'
+        'main main main main'
+        'fot fot fot fot';
+    }
+
+    #nav {
+      grid-area: nav;
+    }
+
+    #nav img {
+      border-radius: 11px;
+      background-color: black;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
+    #hdr {
+      grid-area: hdr;
+    }
+
+    #page {
+      grid-area: main;
+    }
+    #fot{
+      grid-area: fot;
+    }
+
+    .header {
+      background-color: #DCE1E3;
+      display: block;
+      /* border: 2px solid black; */
+      width: auto;
+      /* margin: auto; */
+      /* text-align: center; */
+      height: 280px;
+      position: relative;
+    }
+
+    #brand {
+      /* border: 2px solid black; */
+      display: block;
+      /* margin:auto; */
+      width: auto;
+      text-align: center;
+      font-size: 84px;
+      /* color: initial; */
+      color: #4f5f76;
+    }
+
+    #typej {
+      /* border: 2px solid black; */
+      display: block;
+      width: auto;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .page_1 {
+      /* border: 2px solid black; */
+      /* background-color: aqua; */
+      display: grid;
+      /* margin: auto; */
+      width: auto;
+      height: 430px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .lang{
+      /* border: 2px solid black; */
+      /* background-color: aquamarine; */
+      text-align: center;
+      justify-content: center;
+    }
+    .lang img{
+      margin-top: 5px;
+      height: 200px;
+      width: 300px;
+      padding: 10px;
+    }
+    .lang button{
+        background-color:#4DA8DA;
+        font-size: 22px;
+        width: 240px;
+        /* background-color: rgb(52, 52, 134); */
+        border-radius: 15px;
+    }
+    .lang button:hover{
+      background-color: #007CC7;
+    }
+    .foot {
+      /* width:auto; */
+      /* margin-top: 80px; */
+      /* border: 2px solid yellow; */
+      height: 290px;
+      background-color: #252629;
+      color: white;
+    }
+
+    .upper {
+      /* background-color: red; */
+      /* border: 2px solid blueviolet; */
+      display: block;
+      margin: auto;
+      width: 1100px;
+      height: 190px;
+      text-align: center;
+      margin-top: 68px;
+      justify-content: center;
+    }
+
+    .social {
+      /* border: 2px solid black; */
+      height: 50px;
+    }
+
+    .short {
+      /* text-align:bottom ;   */
+      margin-top: 20px;
+      font-size: 22px;
+      /* border: 2px solid black; */
+      height: 80px;
+
+    }
+
+    .year {
+
+      /* border: 2px solid black; */
+      height: 40px;
+      font-size: 18px;
+    }
+
+    a {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0d6efd;
+    }
+  </style>
 </head>
 
 <body>
@@ -107,7 +254,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form  method="post" action="">
+          <form method="post" action="">
             <!-- <input type="hidden" name="csrfmiddlewaretoken"
               value="E90cINC0tfOt91iAHJiu2OsLEbh47k43YUasrjxvIc7w2el69JmnhF2gjmWbU7Qc"> -->
 
@@ -169,14 +316,83 @@
   </div>
 
   <div class="header" id="hdr">
-      <div id="brand">AICoder.Com</div>
-      <div id="typej">
+    <div id="brand">AICoder.Com</div>
+    <div id="typej">
 
-        <h1><span id="typed"></span></h1>
+      <h1><span id="typed"></span></h1>
+    </div>
+  </div>
+
+  <!-- Language Form -->
+  <div class="page_1" id="page">
+    <div class="lang">
+      <!--<link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+      {% load static %}
+      <img src="{%static 'img/java.jpg' %}"> <br>
+      Get your programming career started with these free video courses. Source code is available with all the videos for your better experience<br>
+      <hr><br>
+      <button>Learn Java</button>
+    </div>
+    <div class="lang">
+      <img src="{%static 'img/python.jpg' %}"> <br>
+      Get your programming career started with these free video courses. Source code is available with all the videos for your better experience<br>
+      <hr><br>
+      <button>Learn Python</button> 
+    </div>
+    <div class="lang">
+      <img src="{%static 'img/ai1.jpg' %}"> <br>
+      Get your programming career started with these free video courses. Source code is available with all the videos for your better experience<br>
+      <hr><br>
+      <button>Learn DataScience</button>
+    </div>
+    <div class="lang">
+      <img src="{%static 'img/web1.jpg' %}"> <br>
+      Get your programming career started with these free video courses. Source code is available with all the videos for your better experience<br>
+      <hr><br>
+      <button>Learn Web</button>
+    </div>
+  </div>
+
+  <!-- here footer -->
+
+  <div class="foot" id="fot">
+    <div class="upper">
+
+      <div class="social">
+        <a href="https://facebook.com"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="42"
+            fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <a href="https://facebook.com"></a>
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+          </svg></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://linkedin.com"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="42"
+            fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+          </svg></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="42" fill="currentColor"
+            class="bi bi-twitter" viewBox="0 0 16 16">
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+          </svg></a>
       </div>
+      <div class="short">
+        <a href="https://google.com">Info</a> .
+        <a href="https://google.com">Support</a>
+        <br>
+        <a href="https://google.com">Terms Of Use</a> .
+        <a href="https://google.com">Privacy Policy</a>
+
+      </div>
+      <div class="year">LiveVoting.Com @2021</div>
+    </div>
+
   </div>
 
   <!-- Link Java Script File in Html File -->
-  <script src="{% static 'js/Script.js' %}"></script> 
+  <script src="{% static 'js/Script.js' %}"></script>
 </body>
+
 </html>

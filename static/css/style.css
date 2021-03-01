@@ -2,8 +2,9 @@ body {
     display: grid;
     font-family: 'Roboto', sans-serif;
     grid-template-areas:
-      'nav nav'
-      'hdr hdr';
+      'nav nav nav nav'
+      'hdr hdr hdr hdr'
+      'main main main main';
   }
 
   #nav {
@@ -18,6 +19,10 @@ body {
   #hdr{
     grid-area: hdr;
   }
+  #page{
+    grid-area: main;
+  }
+
   .header{
     background-color:#DCE1E3;
     display: block;
@@ -45,4 +50,8 @@ body {
     margin-top: 20px;
     text-align: center;
 
+  }
+  .page_1{
+    border: 2px solid black;
+    background-color:black;
   }
